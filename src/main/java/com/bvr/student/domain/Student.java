@@ -1,14 +1,19 @@
 package com.bvr.student.domain;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
-public class Student {
+@Table(name = "student_tbl")
+public class Student implements Serializable{
+	
+	private static final long serialVersionUID = -2228784815938588107L;
 	
 	@Id
 	@Column(name="student_id")
